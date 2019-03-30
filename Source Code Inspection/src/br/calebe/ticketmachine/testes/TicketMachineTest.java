@@ -48,4 +48,19 @@ public class TicketMachineTest {
         ticketMachine.inserir(5);
         assertEquals(5,ticketMachine.getSaldo());
     }
+
+    @Test
+    public void testGetTroco() {
+         int valor = 5;
+        TicketMachine ticketMachine = new TicketMachine(valor);
+        ticketMachine.inserir(10);
+        assertEquals(5,ticketMachine.getTroco());
+    }
+
+    @Test
+    public void testImprimir() throws Exception {
+        int valor = 5;
+        TicketMachine ticketMachine = new TicketMachine(valor);
+        ticketMachine.inserir(5);
+}
 }
