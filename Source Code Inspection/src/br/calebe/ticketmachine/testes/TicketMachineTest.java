@@ -34,4 +34,18 @@ public class TicketMachineTest {
         TicketMachine ticket = new TicketMachine(10);
         Assert.assertEquals("Saldo insuficiente!", "Saldo insuficiente!");
     }
+
+    @Test
+    public void testImprimirSaldoInsuficiente() {
+        TicketMachine ticket = new TicketMachine(10);
+        Assert.assertEquals("Saldo insuficiente!", "Saldo insuficiente!");
+    }
+
+    @Test
+    public void testGetSaldoDois() {
+         int valor = 5;
+        TicketMachine ticketMachine = new TicketMachine(valor);
+        ticketMachine.inserir(5);
+        assertEquals(5,ticketMachine.getSaldo());
+    }
 }
