@@ -9,11 +9,10 @@ import org.junit.Test;
  * @author gpgp3003
  */
 public class TrocoTest {
-    @Test
+   @Test
     public void testGetIterator() {
         Troco troco = new Troco(10);
-        TrocoIterator trocoIt = new TrocoIterator(troco);
-        Assert.assertEquals(trocoIt, troco.getIterator());
+        TrocoIterator ti = new TrocoIterator(troco);
+        Assert.assertEquals(ti, troco.getIterator());
     }
-    
 }
