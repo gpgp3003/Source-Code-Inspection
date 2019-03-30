@@ -2,7 +2,7 @@ package br.calebe.ticketmachine.core;
 
 /**
  *
- * @author Calebe de Paula Bianchini
+ * @author gpgp3003
  */
 public class PapelMoeda {
 

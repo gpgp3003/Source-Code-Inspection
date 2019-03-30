@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 /**
  *
- * @author Calebe de Paula Bianchini
+ * @author gpgp3003
  */
 class Troco {
 

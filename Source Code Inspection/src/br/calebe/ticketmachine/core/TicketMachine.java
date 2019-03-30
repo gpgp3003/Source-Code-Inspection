@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  *
- * @author Calebe de Paula Bianchini
+ * @author gpgp3003
  */
 public class TicketMachine {
 
