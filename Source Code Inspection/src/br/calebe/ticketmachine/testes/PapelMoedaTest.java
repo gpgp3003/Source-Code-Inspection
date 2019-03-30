@@ -21,4 +21,21 @@ public class PapelMoedaTest {
        Assert.assertEquals(5, papel.getQuantidade());
     }
     
+
+    @Test
+    public void testGetValorDois() {
+        int quantidade = 5;
+        int valor = 2;
+        PapelMoeda moeda = new PapelMoeda(valor,quantidade);
+        assertEquals(moeda.getValor(),valor);
+    }
+
+   
+    @Test
+    public void testGetQuantidadeDois() {
+        int quantidade = 5;
+        int valor = 2;
+        PapelMoeda moeda = new PapelMoeda(valor,quantidade);
+        assertEquals(moeda.getQuantidade(),quantidade);
+    }
 }
