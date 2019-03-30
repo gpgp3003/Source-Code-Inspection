@@ -28,4 +28,10 @@ public class TicketMachineTest {
         Assert.assertEquals(0, ticket.getSaldo());
                 
     }
+
+    @Test
+    public void testImprimir() {
+        TicketMachine ticket = new TicketMachine(10);
+        Assert.assertEquals("Saldo insuficiente!", "Saldo insuficiente!");
+    }
 }
