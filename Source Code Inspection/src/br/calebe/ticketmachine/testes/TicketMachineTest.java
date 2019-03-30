@@ -21,4 +21,11 @@ public class TicketMachineTest {
         ticket.inserir(10);
         Assert.assertTrue(aux < ticket.getSaldo());
     }
+
+    @Test
+    public void testGetSaldo() {
+        TicketMachine ticket = new TicketMachine(20);
+        Assert.assertEquals(0, ticket.getSaldo());
+                
+    }
 }
