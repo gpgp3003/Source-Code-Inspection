@@ -53,4 +53,8 @@ public class TicketMachine {
         result += "*****************\n";
         return result;
     }
+
+    private int Troco(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
