@@ -5,91 +5,62 @@
  */
 package br.calebe.ticketmachine.core;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import br.calebe.ticketmachine.exception.PapelMoedaInvalidaException;
+import junit.framework.Assert;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
- * @author Gian Piero
+ * @author EduTedeschi
  */
 public class TicketMachineTest {
     
-    public TicketMachineTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
+    public void testInserir() throws PapelMoedaInvalidaException {
+        TicketMachine ticket = new TicketMachine(5);
+        int aux = ticket.getSaldo();
+        ticket.inserir(10);
+        Assert.assertTrue(aux < ticket.getSaldo());
     }
 
-    /**
-     * Test of inserir method, of class TicketMachine.
-     */
-    @Test
-    public void testInserir() throws Exception {
-        System.out.println("inserir");
-        int quantia = 0;
-        TicketMachine instance = null;
-        instance.inserir(quantia);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getSaldo method, of class TicketMachine.
-     */
     @Test
     public void testGetSaldo() {
-        System.out.println("getSaldo");
-        TicketMachine instance = null;
-        int expResult = 0;
-        int result = instance.getSaldo();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        TicketMachine ticket = new TicketMachine(20);
+        Assert.assertEquals(0, ticket.getSaldo());
+                
     }
 
-    /**
-     * Test of getTroco method, of class TicketMachine.
-     */
+    @Test
+    public void testImprimir() {
+        TicketMachine ticket = new TicketMachine(10);
+        Assert.assertEquals("Saldo insuficiente!", "Saldo insuficiente!");
+    }
+
+    @Test
+    public void testImprimirSaldoInsuficiente() {
+        TicketMachine ticket = new TicketMachine(10);
+        Assert.assertEquals("Saldo insuficiente!", "Saldo insuficiente!");
+    }
+
+    @Test
+    public void testGetSaldoDois() {
+         int valor = 5;
+        TicketMachine ticketMachine = new TicketMachine(valor);
+        ticketMachine.inserir(5);
+        assertEquals(5,ticketMachine.getSaldo());
+    }
+
     @Test
     public void testGetTroco() {
-        System.out.println("getTroco");
-        TicketMachine instance = null;
-        int expResult = 0;
-        int result = instance.getTroco();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+         int valor = 5;
+        TicketMachine ticketMachine = new TicketMachine(valor);
+        ticketMachine.inserir(10);
+        assertEquals(5,ticketMachine.getTroco());
     }
 
-    /**
-     * Test of imprimir method, of class TicketMachine.
-     */
     @Test
     public void testImprimir() throws Exception {
-        System.out.println("imprimir");
-        TicketMachine instance = null;
-        String expResult = "";
-        String result = instance.imprimir();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
+        int valor = 5;
+        TicketMachine ticketMachine = new TicketMachine(valor);
+        ticketMachine.inserir(5);
+}
 }
