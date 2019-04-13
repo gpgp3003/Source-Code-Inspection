@@ -1,7 +1,7 @@
 package br.calebe.ticketmachine.core;
 
-import org.junit.Assert;
-import static org.junit.Assert.assertEquals;
+import junit.framework.Assert;
+import static junit.framework.Assert.assertEquals;
 import org.junit.Test;
 /**
  *

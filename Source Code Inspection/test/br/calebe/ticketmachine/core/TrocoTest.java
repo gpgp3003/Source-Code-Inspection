@@ -1,7 +1,7 @@
 package br.calebe.ticketmachine.core;
 
 import java.util.Iterator;
-import org.junit.Assert;
+import junit.framework.Assert;
 import org.junit.Test;
 
 /**
