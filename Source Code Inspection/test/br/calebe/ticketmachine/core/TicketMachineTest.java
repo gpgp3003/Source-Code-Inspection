@@ -7,6 +7,7 @@ package br.calebe.ticketmachine.core;
 
 import br.calebe.ticketmachine.exception.PapelMoedaInvalidaException;
 import junit.framework.Assert;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 /**
@@ -42,7 +43,7 @@ public class TicketMachineTest {
     }
 
     @Test
-    public void testGetSaldoDois() {
+    public void testGetSaldoDois() throws PapelMoedaInvalidaException {
          int valor = 5;
         TicketMachine ticketMachine = new TicketMachine(valor);
         ticketMachine.inserir(5);
@@ -50,7 +51,7 @@ public class TicketMachineTest {
     }
 
     @Test
-    public void testGetTroco() {
+    public void testGetTroco() throws PapelMoedaInvalidaException {
          int valor = 5;
         TicketMachine ticketMachine = new TicketMachine(valor);
         ticketMachine.inserir(10);
@@ -58,7 +59,7 @@ public class TicketMachineTest {
     }
 
     @Test
-    public void testImprimir() throws Exception {
+    public void testImprimirDois() throws Exception {
         int valor = 5;
         TicketMachine ticketMachine = new TicketMachine(valor);
         ticketMachine.inserir(5);

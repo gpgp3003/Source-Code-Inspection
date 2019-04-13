@@ -1,8 +1,8 @@
 package br.calebe.ticketmachine.core;
 
 import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import org.junit.Assert.*;
 /**
  *
  * @author gpgp3003
